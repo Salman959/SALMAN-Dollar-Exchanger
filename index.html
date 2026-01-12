@@ -35,7 +35,6 @@
             color: var(--text-color);
             line-height: 1.6;
         }
-        /* Prevent translation highlight */
         .notranslate {
             -webkit-translate: no;
             -moz-translate: no;
@@ -153,7 +152,6 @@
             font-family: 'Poppins', sans-serif;
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
-        
         input:read-only {
             background-color: #f1f5f9;
             cursor: not-allowed;
@@ -241,7 +239,6 @@
             align-items: center;
             justify-content: center;
         }
-        
         footer {
             text-align: center;
             padding: 20px;
@@ -249,8 +246,6 @@
             color: var(--light-text-color);
             font-size: 0.9em;
         }
-        
-        /* Help button styles */
         .help-button {
             position: fixed;
             bottom: 20px;
@@ -283,15 +278,12 @@
             font-weight: bold;
             margin-top: 4px;
         }
-        
-        /* Order Table Styles (Updated from Salman Top Up Zone) */
         .history-table {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
             margin-top: 20px;
         }
-        
         .history-table th {
             background-color: #f7fafc;
             color: #4a5568;
@@ -301,24 +293,19 @@
             border-bottom: 2px solid #e2e8f0;
             font-size: 14px;
         }
-        
         .history-table td {
             padding: 12px 16px;
             border-bottom: 1px solid #edf2f7;
             font-size: 14px;
             color: #2d3748;
         }
-        
         .history-table tr {
             background-color: white;
             transition: background-color 0.2s ease;
         }
-        
         .history-table tr:hover {
             background-color: #f8fafc;
         }
-        
-        /* Status badges styling from Salman Top Up Zone */
         .status-badge {
             display: inline-block;
             padding: 4px 12px;
@@ -328,22 +315,18 @@
             text-align: center;
             min-width: 80px;
         }
-        
         .status-pending {
             background-color: #fef3c7;
             color: #92400e;
         }
-        
         .status-approved {
             background-color: #d1fae5;
             color: #065f46;
         }
-        
         .status-rejected {
             background-color: #fee2e2;
             color: #991b1b;
         }
-        
         .type-sell {
             color: #3182ce;
             font-weight: 600;
@@ -352,7 +335,6 @@
             background-color: #ebf8ff;
             display: inline-block;
         }
-        
         .type-buy {
             color: #0e9f6e;
             font-weight: 600;
@@ -361,37 +343,31 @@
             background-color: #f0fff4;
             display: inline-block;
         }
-        
         .no-history {
             text-align: center;
             padding: 40px 20px;
             color: #a0aec0;
         }
-        
         .no-history i {
             font-size: 64px;
             margin-bottom: 20px;
             opacity: 0.5;
         }
-        
         .loading {
             text-align: center;
             padding: 40px 20px;
             color: #a0aec0;
         }
-        
         .loading i {
             font-size: 48px;
             margin-bottom: 15px;
             opacity: 0.7;
             animation: spin 1s linear infinite;
         }
-        
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-        
         .order-container {
             background-color: white;
             border-radius: 10px;
@@ -399,48 +375,40 @@
             padding: 16px;
             margin-bottom: 10px;
         }
-        
         .order-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 10px;
         }
-        
         .order-type {
             font-weight: 600;
             font-size: 16px;
         }
-        
         .order-amount {
             font-weight: 700;
             font-size: 18px;
         }
-        
         .order-details {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
             margin-top: 10px;
         }
-        
         .order-detail-item {
             display: flex;
             flex-direction: column;
         }
-        
         .order-detail-label {
             font-size: 12px;
             color: #718096;
             margin-bottom: 4px;
         }
-        
         .order-detail-value {
             font-size: 14px;
             color: #2d3748;
             font-weight: 500;
         }
-        
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -482,37 +450,30 @@
                 width: 60px;
                 height: 60px;
             }
-            
             .history-table {
                 display: block;
                 overflow-x: auto;
             }
-            
             .order-details {
                 grid-template-columns: 1fr;
             }
         }
-        
         .divider {
             height: 1px;
             background-color: var(--border-color);
             margin: 20px 0;
         }
-        
         .tab-content {
             display: none;
         }
-        
         .tab-content.active {
             display: block;
             animation: fadeIn 0.3s ease;
         }
-        
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        
         .exchange-rate-banner {
             background: linear-gradient(135deg, var(--primary-color), var(--primary-dark-color));
             color: white;
@@ -524,22 +485,18 @@
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
         .rate-box {
             padding: 0 15px;
         }
-        
         .rate-box h3 {
             font-size: 1.1em;
             margin-bottom: 5px;
             font-weight: 500;
         }
-        
         .rate-value {
             font-size: 1.4em;
             font-weight: 700;
         }
-        
         .min-amount {
             background-color: #fef3c7;
             color: #92400e;
@@ -549,8 +506,6 @@
             margin: 10px 0;
             font-weight: 500;
         }
-        
-        /* New Top Up Zone Style Auth Modal */
         .auth-modal {
             position: fixed;
             top: 0;
@@ -563,7 +518,6 @@
             align-items: center;
             z-index: 2000;
         }
-        
         .auth-card {
             background-color: #ffffff;
             border-radius: 16px;
@@ -574,12 +528,10 @@
             position: relative;
             font-family: 'Inter', sans-serif;
         }
-        
         .auth-header {
             text-align: center;
             margin-bottom: 32px;
         }
-        
         .auth-header h2 {
             font-size: 24px;
             font-weight: 700;
@@ -587,12 +539,10 @@
             margin-bottom: 8px;
             border: none;
         }
-        
         .auth-header p {
             color: #4b5563;
             font-size: 16px;
         }
-        
         .auth-input {
             width: 100%;
             background-color: #f3f4f6;
@@ -604,12 +554,10 @@
             color: #111827;
             outline: none;
         }
-        
         .auth-input:focus {
             ring: 2px;
             box-shadow: 0 0 0 2px #3b82f6;
         }
-        
         .auth-btn-gradient {
             background: linear-gradient(to right, #3b82f6, #6366f1);
             color: white;
@@ -623,7 +571,6 @@
             margin-top: 8px;
             transition: all 0.2s;
         }
-
         .auth-btn-gradient-green {
             background: linear-gradient(to right, #10b981, #14b8a6);
             color: white;
@@ -637,36 +584,30 @@
             margin-top: 8px;
             transition: all 0.2s;
         }
-        
         .auth-toggle-text {
             text-align: center;
             margin-top: 24px;
             color: #4b5563;
             font-size: 14px;
         }
-        
         .auth-toggle-link {
             color: #3b82f6;
             font-weight: 500;
             cursor: pointer;
             margin-left: 4px;
         }
-
         .auth-form {
             display: none;
         }
-        
         .auth-form.active {
             display: block;
         }
-        
         .auth-error {
             color: #ef4444;
             font-size: 14px;
             margin-bottom: 16px;
             display: none;
         }
-
         .forgot-link {
             text-align: center;
             margin-top: 16px;
@@ -680,18 +621,15 @@
         .forgot-link a:hover {
             text-decoration: underline;
         }
-        
         .profile-info {
             display: flex;
             align-items: center;
             justify-content: flex-end;
             color: white;
         }
-        
         .profile-info span {
             margin-right: 10px;
         }
-        
         .logout-btn {
             background: rgba(255, 255, 255, 0.2);
             border: none;
@@ -702,18 +640,35 @@
             font-size: 0.9em;
             transition: background 0.3s ease;
         }
-        
         .logout-btn:hover {
             background: rgba(255, 255, 255, 0.3);
         }
+        .payment-button {
+            background: linear-gradient(to right, #3b82f6, #6366f1);
+            color: white;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 20px;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            text-decoration: none;
+        }
+        .payment-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(26, 86, 219, 0.25);
+        }
     </style>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage-compat.js"></script>
 </head>
 <body>
-    <!-- Auth Modal (Redesigned like Salman Top Up Zone) -->
+    <!-- Authentication Modal -->
     <div id="authModal" class="auth-modal" style="display: none;">
         <div class="auth-card">
             <div class="auth-header">
@@ -721,7 +676,6 @@
                 <p>Sign in to exchange BTC securely</p>
             </div>
             
-            <!-- Login Form -->
             <div id="loginForm" class="auth-form active">
                 <div class="form-group">
                     <label style="color: #374151; margin-bottom: 8px; display:block;">Email</label>
@@ -744,7 +698,6 @@
                 </div>
             </div>
             
-            <!-- Sign Up Form -->
             <div id="signupForm" class="auth-form">
                 <div class="form-group">
                     <label style="color: #374151; margin-bottom: 8px; display:block;">Full Name</label>
@@ -771,7 +724,6 @@
                 </div>
             </div>
             
-            <!-- Forgot Password Form -->
             <div id="forgotPasswordForm" class="auth-form">
                 <div class="form-group">
                     <label style="color: #374151; margin-bottom: 8px; display:block;">Email Address</label>
@@ -789,7 +741,7 @@
         </div>
     </div>
     
-    <!-- Main App (Initially Hidden) -->
+    <!-- Main Application -->
     <div id="mainApp" style="display: none;">
         <header>
             <div class="logo">
@@ -805,7 +757,6 @@
                 <ul>
                     <li><a onclick="showPage('sellPage')" class="active"><i class="material-icons">payments</i> Sell</a></li>
                     <li><a onclick="showPage('buyPage')"><i class="material-icons">shopping_cart</i> Buy</a></li>
-                    <!-- Page names changed as requested -->
                     <li><a onclick="showPage('myHistoryPage')"><i class="material-icons">history</i> My Order</a></li>
                     <li><a onclick="showPage('liveHistoryPage')"><i class="material-icons">public</i> Live Order</a></li>
                 </ul>
@@ -815,19 +766,20 @@
             <div class="exchange-rate-banner">
                 <div class="rate-box">
                     <h3>BTC → bKash</h3>
-                    <div class="rate-value">BDT 120</div>
+                    <div id="sellRateDisplay" class="rate-value">BDT 120</div>
                 </div>
                 <div class="rate-box">
                     <h3>bKash → BTC</h3>
-                    <div class="rate-value">BDT 130</div>
+                    <div id="buyRateDisplay" class="rate-value">BDT 130</div>
                 </div>
             </div>
             
             <div class="min-amount">
                 <i class="material-icons" style="vertical-align: middle; margin-right: 5px;">info</i>
-                Minimum Exchange Amount: $0.10
+                Minimum Exchange Amount: <span id="minExchangeBTC">0.0005535</span> BTC
             </div>
             
+            <!-- Sell Page -->
             <div id="sellPage" class="tab-content active">
                 <div id="sell" class="card">
                     <h2><i class="material-icons">payments</i> Selling (Send BTC)</h2>
@@ -852,16 +804,12 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="sellAmount"><i class="material-icons" style="font-size: 18px; vertical-align: middle;">attach_money</i> Sell ($) Minimum: <span id="sellMinAmount">0.10</span>$</label>
-                        <input type="number" id="sellAmount" placeholder="Enter amount to sell" min="0.10" step="0.01">
+                        <label for="sellAmount"><i class="material-icons" style="font-size: 18px; vertical-align: middle;">attach_money</i> Sell BTC Minimum: <span id="sellMinAmount">0.00001107</span> BTC</label>
+                        <input type="number" id="sellAmount" placeholder="Enter BTC amount to sell" min="0.00001107" step="0.00000001">
                     </div>
                     <div class="form-group">
                         <label for="receivedAmount"><i class="material-icons" style="font-size: 18px; vertical-align: middle;">account_balance_wallet</i> Received Amount (BDT)</label>
                         <input type="text" id="receivedAmount" readonly>
-                        <div id="sellChargeInfo" class="charge-info" style="display: none;">
-                            <i class="material-icons" style="margin-right: 5px;">warning</i>
-                            <span></span>
-                        </div>
                     </div>
                     
                     <div class="divider"></div>
@@ -869,12 +817,9 @@
                     <div id="sellInstruction" class="alert-message" style="display: none;">
                         <h3><i class="material-icons" style="vertical-align: middle;">payment</i> Payment Instructions</h3>
                         <p>Please send the BTC amount to this address and submit the request with Transaction ID</p>
-                        <div class="account-details">
-                            <p>Currency: <span id="sellCurrency">BTC</span></p>
-                            <p>Account Holder: <span id="sellAccountHolder">Address Only</span> <span class="material-icons copy-icon" data-copy-target="sellAccountHolder">content_copy</span></p>
-                            <p><span id="sellMethodIDLabel">BTC Address</span>: <span id="sellMethodID">15rAovKcFcAtjFFdqxbS7Q7xktY1H3sVZG</span> <span class="material-icons copy-icon" data-copy-target="sellMethodID">content_copy</span></p>
-                            <p>Others: <span id="sellOthers">N/A</span> <span class="material-icons copy-icon" data-copy-target="sellOthers">content_copy</span></p>
-                        </div>
+                        <a href="https://salman959.github.io/Payment-Details/" target="_blank" class="payment-button">
+                            <i class="material-icons" style="vertical-align: middle; margin-right: 5px;">payment</i> CLICK HERE
+                        </a>
                     </div>
                     
                     <div class="form-group">
@@ -908,6 +853,7 @@
                 </div>
             </div>
             
+            <!-- Buy Page -->
             <div id="buyPage" class="tab-content" style="display: none;">
                 <div id="buy" class="card">
                     <h2><i class="material-icons">shopping_cart</i> Buying BTC</h2>
@@ -932,16 +878,12 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="buyAmount"><i class="material-icons" style="font-size: 18px; vertical-align: middle;">attach_money</i> Buy ($) Minimum: <span id="buyMinAmount">0.10</span>$</label>
-                        <input type="number" id="buyAmount" placeholder="Enter amount to buy" min="0.10" step="0.01">
+                        <label for="buyAmount"><i class="material-icons" style="font-size: 18px; vertical-align: middle;">attach_money</i> Buy BTC Minimum: <span id="buyMinAmount">0.00001107</span> BTC</label>
+                        <input type="number" id="buyAmount" placeholder="Enter BTC amount to buy" min="0.00001107" step="0.00000001">
                     </div>
                     <div class="form-group">
                         <label for="totalPayAmount"><i class="material-icons" style="font-size: 18px; vertical-align: middle;">account_balance_wallet</i> Total Pay Amount (BDT)</label>
                         <input type="text" id="totalPayAmount" readonly>
-                        <div id="buyChargeInfo" class="charge-info" style="display: none;">
-                            <i class="material-icons" style="margin-right: 5px;">warning</i>
-                            <span></span>
-                        </div>
                     </div>
                     
                     <div class="divider"></div>
@@ -979,7 +921,7 @@
                 </div>
             </div>
             
-            <!-- My Order Page (Updated Design) -->
+            <!-- My History Page -->
             <div id="myHistoryPage" class="tab-content" style="display: none;">
                 <div class="card">
                     <h2><i class="material-icons">history</i> My Order</h2>
@@ -992,14 +934,13 @@
                             <thead>
                                 <tr>
                                     <th>Type</th>
-                                    <th>Amount ($)</th>
+                                    <th>Amount (BTC)</th>
                                     <th>Total Amount (BDT)</th>
                                     <th>Date</th>
                                     <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody id="myHistoryTableBody">
-                                <!-- My Order data will be inserted here -->
                             </tbody>
                         </table>
                         <div id="noMyHistory" class="no-history" style="display: none;">
@@ -1011,7 +952,7 @@
                 </div>
             </div>
 
-            <!-- Live Order Page (Updated Design) -->
+            <!-- Live History Page -->
             <div id="liveHistoryPage" class="tab-content" style="display: none;">
                 <div class="card">
                     <h2><i class="material-icons">public</i> Live Order</h2>
@@ -1024,14 +965,13 @@
                             <thead>
                                 <tr>
                                     <th>Type</th>
-                                    <th>Amount ($)</th>
+                                    <th>Amount (BTC)</th>
                                     <th>Total Amount (BDT)</th>
                                     <th>Date</th>
                                     <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody id="liveHistoryTableBody">
-                                <!-- Live Order data will be inserted here -->
                             </tbody>
                         </table>
                         <div id="noLiveHistory" class="no-history" style="display: none;">
@@ -1042,7 +982,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         
         <footer>
@@ -1055,6 +994,13 @@
         </a>
     </div>
 
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage-compat.js"></script>
+
+    <!-- JavaScript -->
     <script>
         // Firebase Configuration
         const firebaseConfig = {
@@ -1072,10 +1018,66 @@
         const auth = firebase.auth();
         const db = firebase.firestore();
         
+        // Global Variables
         let currentUser = null;
         let userId = '';
+        let minExchangeBTC = 0.00001107; // Fixed minimum amount
+        let adminSellBTC = 0.00001107; // BTC amount for sell rate (admin editable)
+        let adminSellBDT = 120; // BDT amount for sell rate (admin editable)
+        let adminBuyBTC = 0.00001107; // BTC amount for buy rate (admin editable)
+        let adminBuyBDT = 130; // BDT amount for buy rate (admin editable)
         
-        // --- Authentication Functions ---
+        // Calculate rate per BTC
+        let sellRatePerBTC = adminSellBDT / adminSellBTC; // Price per BTC for selling
+        let buyRatePerBTC = adminBuyBDT / adminBuyBTC; // Price per BTC for buying
+        
+        // Payment Accounts
+        let paymentAccounts = {
+            "BTC": { 
+                id: "bc1p2e5gp42c9rzv2sayslxtdpmk0mvtl974wsxzwz5sllw44x35f7csxf4x2h", 
+                currency: "BTC", 
+                accountHolder: "Address Only", 
+                others: "N/A" 
+            },
+            "bKash Personal": { 
+                name: "bKash Personal", 
+                number: "01601856499", 
+                type: "Personal" 
+            },
+            "Nagad Personal": { 
+                name: "Nagad Personal", 
+                number: "01601856499", 
+                type: "Send Money (Personal)" 
+            },
+            "Rocket Personal": { 
+                name: "Rocket Personal", 
+                number: "01601856499", 
+                type: "Personal" 
+            },
+        };
+
+        // DOM Elements
+        const sellSendMethod = document.getElementById('sellSendMethod');
+        const sellReceiveMethod = document.getElementById('sellReceiveMethod');
+        const sellAmountInput = document.getElementById('sellAmount');
+        const receivedAmountInput = document.getElementById('receivedAmount');
+        const sellRateInfo = document.getElementById('sellRateInfo');
+        const sellInstruction = document.getElementById('sellInstruction');
+        const sellMinAmount = document.getElementById('sellMinAmount');
+        const sellMobileBankingName = document.getElementById('sellMobileBankingName');
+        
+        const buySendMethod = document.getElementById('buySendMethod');
+        const buyReceiveMethod = document.getElementById('buyReceiveMethod');
+        const buyAmountInput = document.getElementById('buyAmount');
+        const totalPayAmountInput = document.getElementById('totalPayAmount');
+        const buyRateInfo = document.getElementById('buyRateInfo');
+        const buyPaymentDetails = document.getElementById('buyPaymentDetails');
+        const buyMobileBankingName = document.getElementById('buyMobileBankingName');
+        const buyAccountNumber = document.getElementById('buyAccountNumber');
+        const buyPaymentType = document.getElementById('buyPaymentType');
+        const buyMinAmount = document.getElementById('buyMinAmount');
+
+        // ==================== AUTHENTICATION FUNCTIONS ====================
         function showAuthModal() {
             document.getElementById('authModal').style.display = 'flex';
             document.getElementById('mainApp').style.display = 'none';
@@ -1088,12 +1090,10 @@
         }
         
         function showAuthTab(tabName) {
-            // Hide all forms
             document.querySelectorAll('.auth-form').forEach(form => {
                 form.classList.remove('active');
             });
             
-            // Clear errors
             document.querySelectorAll('.auth-error').forEach(error => {
                 error.style.display = 'none';
                 error.textContent = '';
@@ -1102,7 +1102,6 @@
             document.getElementById('forgotSuccess').style.display = 'none';
             document.getElementById('forgotSuccess').textContent = '';
             
-            // Show selected form
             if (tabName === 'login') {
                 document.getElementById('loginForm').classList.add('active');
             } else if (tabName === 'signup') {
@@ -1128,13 +1127,12 @@
                 currentUser = userCredential.user;
                 userId = currentUser.uid;
                 
-                // Update UI
                 document.getElementById('userEmailDisplay').textContent = currentUser.email;
                 document.getElementById('profileInfo').style.display = 'flex';
                 
                 hideAuthModal();
                 showNotification('Logged in successfully!', 'success');
-                loadMyHistory(); // Load user's history
+                loadMyHistory();
             } catch (error) {
                 console.error('Login error:', error);
                 errorEl.textContent = getAuthErrorMessage(error);
@@ -1149,7 +1147,6 @@
             const confirmPassword = document.getElementById('signupConfirmPassword').value.trim();
             const errorEl = document.getElementById('signupError');
             
-            // Validation
             if (!name || !email || !password || !confirmPassword) {
                 errorEl.textContent = 'Please fill in all fields.';
                 errorEl.style.display = 'block';
@@ -1173,7 +1170,6 @@
                 currentUser = userCredential.user;
                 userId = currentUser.uid;
                 
-                // Save additional user info to Firestore
                 await db.collection('users').doc(userId).set({
                     name: name,
                     email: email,
@@ -1181,7 +1177,6 @@
                     balance: 0
                 });
                 
-                // Update UI
                 document.getElementById('userEmailDisplay').textContent = currentUser.email;
                 document.getElementById('profileInfo').style.display = 'flex';
                 
@@ -1211,7 +1206,6 @@
                 successEl.style.display = 'block';
                 errorEl.style.display = 'none';
                 
-                // Clear input
                 document.getElementById('forgotEmail').value = '';
             } catch (error) {
                 console.error('Forgot password error:', error);
@@ -1227,7 +1221,6 @@
                 currentUser = null;
                 userId = '';
                 
-                // Clear UI
                 document.getElementById('profileInfo').style.display = 'none';
                 
                 showAuthModal();
@@ -1259,26 +1252,24 @@
             }
         }
         
-        // Initialize auth state listener
+        // Auth State Listener
         auth.onAuthStateChanged((user) => {
             if (user) {
                 currentUser = user;
                 userId = user.uid;
                 
-                // Update UI
                 document.getElementById('userEmailDisplay').textContent = user.email;
                 document.getElementById('profileInfo').style.display = 'flex';
                 document.getElementById('mainApp').style.display = 'block';
                 document.getElementById('authModal').style.display = 'none';
                 
-                // Load user's history
                 loadMyHistory();
             } else {
                 showAuthModal();
             }
         });
-        
-        // --- Page Navigation and UI Logic ---
+
+        // ==================== PAGE NAVIGATION ====================
         function showPage(pageId) {
             document.querySelectorAll('.tab-content').forEach(page => page.style.display = 'none');
             document.getElementById(pageId).style.display = 'block';
@@ -1288,7 +1279,6 @@
                 activeLink.classList.add('active');
             }
             
-            // Load history when page is shown
             if (pageId === 'myHistoryPage') {
                 loadMyHistory();
             }
@@ -1297,12 +1287,14 @@
             }
         }
         
+        // Mobile Menu Toggle
         const menuIcon = document.getElementById('menuIcon');
         const mainNav = document.getElementById('mainNav');
         menuIcon.addEventListener('click', () => {
             mainNav.classList.toggle('active');
         });
-        
+
+        // ==================== COPY FUNCTIONALITY ====================
         document.querySelectorAll('.copy-icon').forEach(icon => {
             icon.addEventListener('click', function() {
                 const targetId = this.dataset.copyTarget;
@@ -1318,96 +1310,29 @@
                 }
             });
         });
-        
-        // --- Rate Calculation and Display ---
-        const sellSendMethod = document.getElementById('sellSendMethod');
-        const sellReceiveMethod = document.getElementById('sellReceiveMethod');
-        const sellAmountInput = document.getElementById('sellAmount');
-        const receivedAmountInput = document.getElementById('receivedAmount');
-        const sellRateInfo = document.getElementById('sellRateInfo');
-        const sellInstruction = document.getElementById('sellInstruction');
-        const sellCurrency = document.getElementById('sellCurrency');
-        const sellAccountHolder = document.getElementById('sellAccountHolder');
-        const sellMethodIDLabel = document.getElementById('sellMethodIDLabel');
-        const sellMethodID = document.getElementById('sellMethodID');
-        const sellOthers = document.getElementById('sellOthers');
-        const sellMobileBankingName = document.getElementById('sellMobileBankingName');
-        const sellMinAmount = document.getElementById('sellMinAmount');
-        const sellChargeInfo = document.getElementById('sellChargeInfo');
-        
-        const buySendMethod = document.getElementById('buySendMethod');
-        const buyReceiveMethod = document.getElementById('buyReceiveMethod');
-        const buyAmountInput = document.getElementById('buyAmount');
-        const totalPayAmountInput = document.getElementById('totalPayAmount');
-        const buyRateInfo = document.getElementById('buyRateInfo');
-        const buyPaymentDetails = document.getElementById('buyPaymentDetails');
-        const buyMobileBankingName = document.getElementById('buyMobileBankingName');
-        const buyAccountNumber = document.getElementById('buyAccountNumber');
-        const buyPaymentType = document.getElementById('buyPaymentType');
-        const buyMinAmount = document.getElementById('buyMinAmount');
-        const buyChargeInfo = document.getElementById('buyChargeInfo');
 
-        // Dummy Rates and Account Info
-        let exchangeRates = {
-            "BTC-bKash Personal": { sellRate: 120, buyRate: 130, minSell: 0.10, minBuy: 0.10 },
-            "BTC-Nagad Personal": { sellRate: 120, buyRate: 130, minSell: 0.10, minBuy: 0.10 },
-            "BTC-Rocket Personal": { sellRate: 120, buyRate: 130, minSell: 0.10, minBuy: 0.10 },
-            "bKash Personal-BTC": { sellRate: 120, buyRate: 130, minSell: 0.10, minBuy: 0.10 },
-            "Nagad Personal-BTC": { sellRate: 120, buyRate: 130, minSell: 0.10, minBuy: 0.10 },
-            "Rocket Personal-BTC": { sellRate: 120, buyRate: 130, minSell: 0.10, minBuy: 0.10 },
-        };
-
-        let paymentAccounts = {
-            "BTC": { id: "15rAovKcFcAtjFFdqxbS7Q7xktY1H3sVZG", currency: "BTC", accountHolder: "Address Only", others: "N/A" },
-            "bKash Personal": { name: "bKash Personal", number: "01601856499", type: "Personal" },
-            "Nagad Personal": { name: "Nagad Personal", number: "01601856499", type: "Send Money (Personal)" },
-            "Rocket Personal": { name: "Rocket Personal", number: "01601856499", type: "Personal" },
-        };
-
+        // ==================== SELL FORM FUNCTIONS ====================
         function updateSellFields() {
             const sendMethod = sellSendMethod.value;
             const receiveMethod = sellReceiveMethod.value;
-            const key = `${sendMethod}-${receiveMethod}`;
-            const rateData = exchangeRates[key];
-            sellChargeInfo.style.display = 'none';
-            if (rateData) {
-                sellRateInfo.querySelector('span').textContent = `Today ${sendMethod} sell rate is: BDT ${rateData.sellRate}`;
+            
+            if (sendMethod && receiveMethod) {
+                sellRateInfo.querySelector('span').textContent = `1 BTC = BDT ${sellRatePerBTC.toFixed(2)}`;
                 sellRateInfo.style.display = 'flex';
-                sellMinAmount.textContent = rateData.minSell;
-                sellAmountInput.min = rateData.minSell;
+                sellMinAmount.textContent = adminSellBTC;
+                sellAmountInput.min = adminSellBTC;
+                
                 let amount = parseFloat(sellAmountInput.value);
-                if (!isNaN(amount) && amount >= rateData.minSell) {
-                    let calculatedReceivedAmount = amount * rateData.sellRate;
-                    let charge = 0;
-                    
-                    if (amount >= 0.10 && amount <= 0.50) {
-                        charge = 5;
-                    } else if (amount >= 0.51 && amount <= 0.70) {
-                        charge = 4;
-                    } else if (amount >= 0.71 && amount <= 0.99) {
-                        charge = 3;
-                    }
-                    
-                    if(charge > 0) {
-                        calculatedReceivedAmount -= charge;
-                        sellChargeInfo.querySelector('span').textContent = `A charge of ${charge} BDT has been applied.`;
-                        sellChargeInfo.style.display = 'flex';
-                    }
+                if (!isNaN(amount) && amount >= adminSellBTC) {
+                    // Correct calculation: amount BTC how much BDT
+                    let calculatedReceivedAmount = amount * sellRatePerBTC;
                     receivedAmountInput.value = calculatedReceivedAmount.toFixed(2);
-                } else {
-                    receivedAmountInput.value = '';
-                }
-                if (paymentAccounts[sendMethod]) {
-                    const accountInfo = paymentAccounts[sendMethod];
-                    sellCurrency.textContent = accountInfo.currency || sendMethod;
-                    sellAccountHolder.textContent = accountInfo.accountHolder || 'N/A';
-                    sellMethodIDLabel.textContent = `${sendMethod} Address`;
-                    sellMethodID.textContent = accountInfo.id || 'N/A';
-                    sellOthers.textContent = accountInfo.others || 'N/A';
                     sellInstruction.style.display = 'block';
                 } else {
+                    receivedAmountInput.value = '';
                     sellInstruction.style.display = 'none';
                 }
+                
                 if (paymentAccounts[receiveMethod]) {
                     sellMobileBankingName.value = paymentAccounts[receiveMethod].name || receiveMethod;
                 } else {
@@ -1417,46 +1342,32 @@
                 sellRateInfo.style.display = 'none';
                 sellInstruction.style.display = 'none';
                 receivedAmountInput.value = '';
-                sellMinAmount.textContent = '0.10';
-                sellAmountInput.min = '0.10';
+                sellMinAmount.textContent = adminSellBTC;
+                sellAmountInput.min = adminSellBTC;
                 sellMobileBankingName.value = '';
             }
         }
 
+        // ==================== BUY FORM FUNCTIONS ====================
         function updateBuyFields() {
             const sendMethod = buySendMethod.value;
             const receiveMethod = buyReceiveMethod.value;
-            const key = `${receiveMethod}-${sendMethod}`;
-            const rateData = exchangeRates[key];
-            buyChargeInfo.style.display = 'none';
-            if (rateData) {
-                buyRateInfo.querySelector('span').textContent = `Today ${receiveMethod} buy rate is: BDT ${rateData.buyRate}`;
+            
+            if (sendMethod && receiveMethod) {
+                buyRateInfo.querySelector('span').textContent = `1 BTC = BDT ${buyRatePerBTC.toFixed(2)}`;
                 buyRateInfo.style.display = 'flex';
-                buyMinAmount.textContent = rateData.minBuy;
-                buyAmountInput.min = rateData.minBuy;
+                buyMinAmount.textContent = adminBuyBTC;
+                buyAmountInput.min = adminBuyBTC;
+                
                 const amount = parseFloat(buyAmountInput.value);
-                if (!isNaN(amount) && amount >= rateData.minBuy) {
-                    let totalBDT = (amount * rateData.buyRate);
-                    
-                    let charge = 0;
-                    if (amount >= 0.10 && amount <= 0.50) {
-                        charge = 5;
-                    } else if (amount >= 0.51 && amount <= 0.70) {
-                        charge = 4;
-                    } else if (amount >= 0.71 && amount <= 0.99) {
-                        charge = 3;
-                    }
-                    
-                    if(charge > 0) {
-                        totalBDT += charge;
-                        buyChargeInfo.querySelector('span').textContent = `A charge of ${charge} BDT has been applied.`;
-                        buyChargeInfo.style.display = 'flex';
-                    }
-                    
+                if (!isNaN(amount) && amount >= adminBuyBTC) {
+                    // Correct calculation: amount BTC how much BDT needed
+                    let totalBDT = amount * buyRatePerBTC;
                     totalPayAmountInput.value = totalBDT.toFixed(2);
                 } else {
                     totalPayAmountInput.value = '';
                 }
+                
                 if (paymentAccounts[sendMethod]) {
                     buyMobileBankingName.textContent = paymentAccounts[sendMethod].name || sendMethod;
                     buyAccountNumber.textContent = paymentAccounts[sendMethod].number || 'N/A';
@@ -1469,37 +1380,40 @@
                 buyRateInfo.style.display = 'none';
                 buyPaymentDetails.style.display = 'none';
                 totalPayAmountInput.value = '';
-                buyMinAmount.textContent = '0.10';
-                buyAmountInput.min = '0.10';
+                buyMinAmount.textContent = adminBuyBTC;
+                buyAmountInput.min = adminBuyBTC;
             }
         }
 
-        sellSendMethod.addEventListener('change', updateSellFields);
-        sellReceiveMethod.addEventListener('change', updateSellFields);
-        sellAmountInput.addEventListener('input', updateSellFields);
-        buySendMethod.addEventListener('change', updateBuyFields);
-        buyReceiveMethod.addEventListener('change', updateBuyFields);
-        buyAmountInput.addEventListener('input', updateBuyFields);
-
-        // --- Firebase Integration ---
+        // ==================== FIREBASE CONFIG FETCH ====================
         async function fetchConfigFromFirebase() {
             try {
                 const configDoc = await db.collection('adminConfig').doc('settings').get();
                 if (configDoc.exists) {
                     const data = configDoc.data();
-                    if(data.sellRate && data.buyRate) {
-                        // Update exchange rates
-                        Object.keys(exchangeRates).forEach(key => {
-                            if (key.includes('BTC')) {
-                                exchangeRates[key].sellRate = data.sellRate;
-                                exchangeRates[key].buyRate = data.buyRate;
-                            }
-                        });
-                        
-                        // Update the rate banner
-                        document.querySelector('.exchange-rate-banner .rate-value:first-child').textContent = `BDT ${data.sellRate}`;
-                        document.querySelector('.exchange-rate-banner .rate-value:last-child').textContent = `BDT ${data.buyRate}`;
+                    
+                    // Update from admin panel
+                    if(data.adminSellBTC) {
+                        adminSellBTC = parseFloat(data.adminSellBTC);
                     }
+                    if(data.adminSellBDT) {
+                        adminSellBDT = parseFloat(data.adminSellBDT);
+                    }
+                    if(data.adminBuyBTC) {
+                        adminBuyBTC = parseFloat(data.adminBuyBTC);
+                    }
+                    if(data.adminBuyBDT) {
+                        adminBuyBDT = parseFloat(data.adminBuyBDT);
+                    }
+                    
+                    // Calculate rate per BTC
+                    sellRatePerBTC = adminSellBDT / adminSellBTC;
+                    buyRatePerBTC = adminBuyBDT / adminBuyBTC;
+                    
+                    // Update display
+                    document.getElementById('sellRateDisplay').textContent = `1 BTC = BDT ${sellRatePerBTC.toFixed(2)}`;
+                    document.getElementById('buyRateDisplay').textContent = `1 BTC = BDT ${buyRatePerBTC.toFixed(2)}`;
+                    document.getElementById('minExchangeBTC').textContent = adminSellBTC;
                     
                     // Update payment accounts
                     if(data.btcAddress) paymentAccounts.BTC.id = data.btcAddress;
@@ -1517,7 +1431,7 @@
             }
         }
 
-        // --- Request Submission ---
+        // ==================== SUBMIT REQUESTS ====================
         async function submitSellRequest() {
             if (!currentUser) {
                 showNotification('Please login first to submit a request.', 'error');
@@ -1539,8 +1453,8 @@
                 showNotification('Please select send and receive methods.', 'error');
                 return;
             }
-            if (isNaN(amount) || amount < parseFloat(sellMinAmount.textContent)) {
-                showNotification(`Please enter an amount greater than or equal to ${sellMinAmount.textContent}$ for selling.`, 'error');
+            if (isNaN(amount) || amount < adminSellBTC) {
+                showNotification(`Please enter an amount greater than or equal to ${adminSellBTC} BTC for selling.`, 'error');
                 return;
             }
             if (!accountNumber) {
@@ -1578,7 +1492,7 @@
                 
                 showNotification('Sell request submitted successfully!', 'success');
                 
-                // Reset form
+                // Clear form
                 sellAmountInput.value = '';
                 receivedAmountInput.value = '';
                 document.getElementById('sellAccountNumber').value = '';
@@ -1586,7 +1500,6 @@
                 document.getElementById('sellSenderAccount').value = '';
                 sellInstruction.style.display = 'none';
                 
-                // Reload history
                 loadMyHistory();
             } catch (error) {
                 console.error('Error submitting sell request:', error);
@@ -1617,8 +1530,8 @@
                 showNotification('Please select send and receive methods.', 'error');
                 return;
             }
-            if (isNaN(amount) || amount < parseFloat(buyMinAmount.textContent)) {
-                showNotification(`Please enter an amount greater than or equal to ${buyMinAmount.textContent}$ for buying.`, 'error');
+            if (isNaN(amount) || amount < adminBuyBTC) {
+                showNotification(`Please enter an amount greater than or equal to ${adminBuyBTC} BTC for buying.`, 'error');
                 return;
             }
             if (!senderAccount) {
@@ -1659,7 +1572,7 @@
                 
                 showNotification('Buy request submitted successfully!', 'success');
                 
-                // Reset form
+                // Clear form
                 buyAmountInput.value = '';
                 totalPayAmountInput.value = '';
                 document.getElementById('buySenderAccount').value = '';
@@ -1668,7 +1581,6 @@
                 document.getElementById('buyNotes').value = '';
                 buyPaymentDetails.style.display = 'none';
                 
-                // Reload history
                 loadMyHistory();
             } catch (error) {
                 console.error('Error submitting buy request:', error);
@@ -1679,9 +1591,7 @@
             }
         }
 
-        // --- History Management (Updated with new design and data structure) ---
-        
-        // My Order
+        // ==================== HISTORY FUNCTIONS ====================
         let myHistoryUnsubscribe = null;
         function loadMyHistory() {
             if (!currentUser) {
@@ -1728,7 +1638,6 @@
                 }, (error) => {
                     console.error('Error loading my history:', error);
                     loading.style.display = 'none';
-                    // Removed error text as requested
                 });
 
             } catch (error) {
@@ -1737,7 +1646,6 @@
             }
         }
 
-        // Live Order (Max 10 transactions)
         let liveHistoryUnsubscribe = null;
         function loadLiveHistory() {
             const loading = document.getElementById('liveHistoryLoading');
@@ -1757,7 +1665,7 @@
             try {
                 const query = db.collection('transactions')
                     .orderBy('timestamp', 'desc')
-                    .limit(10); // Max 10 transactions
+                    .limit(10);
 
                 liveHistoryUnsubscribe = query.onSnapshot((snapshot) => {
                     loading.style.display = 'none';
@@ -1777,7 +1685,6 @@
                 }, (error) => {
                     console.error('Error loading live history:', error);
                     loading.style.display = 'none';
-                    // Error message suppressed
                 });
             } catch (error) {
                 console.error('Error setting up live listener:', error);
@@ -1785,14 +1692,12 @@
             }
         }
 
-        // Helper to render Order Row with new design
         function renderOrderRow(tbody, data, isMyOrder) {
             const row = document.createElement('tr');
             const dateStr = formatDate(data.timestamp);
             const { statusClass, statusText } = getStatusInfo(data.status);
             const typeClass = data.type.toLowerCase();
             
-            // Determine BDT Amount
             let bdtAmount = '0.00';
             if (data.type === 'Sell' && data.receivedAmount) {
                 bdtAmount = parseFloat(data.receivedAmount).toFixed(2);
@@ -1802,7 +1707,7 @@
             
             row.innerHTML = `
                 <td><span class="type-${typeClass}">${data.type}</span></td>
-                <td>$${parseFloat(data.amount).toFixed(2)}</td>
+                <td>${parseFloat(data.amount).toFixed(8)} BTC</td>
                 <td>৳${bdtAmount}</td>
                 <td>${dateStr}</td>
                 <td><span class="status-badge ${statusClass}">${statusText}</span></td>
@@ -1836,7 +1741,7 @@
             return { statusClass, statusText };
         }
 
-        // --- Notification System ---
+        // ==================== UTILITY FUNCTIONS ====================
         function showNotification(message, type = 'info') {
             const notification = document.createElement('div');
             notification.textContent = message;
@@ -1872,16 +1777,32 @@
             }, 3000);
         }
 
-        // --- Initialize App ---
+        // ==================== EVENT LISTENERS ====================
+        sellSendMethod.addEventListener('change', updateSellFields);
+        sellReceiveMethod.addEventListener('change', updateSellFields);
+        sellAmountInput.addEventListener('input', updateSellFields);
+        
+        buySendMethod.addEventListener('change', updateBuyFields);
+        buyReceiveMethod.addEventListener('change', updateBuyFields);
+        buyAmountInput.addEventListener('input', updateBuyFields);
+
+        // ==================== INITIALIZATION ====================
         window.onload = function() {
+            // Set default values
             sellSendMethod.value = "BTC";
             sellReceiveMethod.value = "bKash Personal";
             buySendMethod.value = "bKash Personal";
             buyReceiveMethod.value = "BTC";
             
+            // Update forms
             updateSellFields();
             updateBuyFields();
+            
+            // Fetch config from Firebase
             fetchConfigFromFirebase();
+            
+            // Set interval to fetch config every 30 seconds
+            setInterval(fetchConfigFromFirebase, 30000);
         };
     </script>
 </body>
