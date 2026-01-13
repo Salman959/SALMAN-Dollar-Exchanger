@@ -665,6 +665,36 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(26, 86, 219, 0.25);
         }
+        .copy-button {
+            background: linear-gradient(to right, #10b981, #14b8a6);
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.9em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+        .copy-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(16, 185, 129, 0.25);
+        }
+        .copy-button i {
+            margin-right: 5px;
+        }
+        .number-display {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+        .number-display span {
+            font-weight: 600;
+            color: var(--text-color);
+        }
     </style>
 </head>
 <body>
@@ -776,7 +806,7 @@
             
             <div class="min-amount">
                 <i class="material-icons" style="vertical-align: middle; margin-right: 5px;">info</i>
-                Minimum Exchange Amount: <span id="minExchangeBTC">0.0005535</span> BTC
+                Minimum Exchange Amount: <span id="minExchangeBTC">0.00001107</span> BTC
             </div>
             
             <!-- Sell Page -->
@@ -829,7 +859,12 @@
                     </div>
                     <div class="form-group">
                         <label for="sellAccountNumber">Account Number *</label>
-                        <input type="text" id="sellAccountNumber" placeholder="Enter here.....">
+                        <div class="number-display">
+                            <input type="text" id="sellAccountNumber" placeholder="Enter here....." style="flex: 1;">
+                            <button class="copy-button" onclick="copyToClipboard('sellAccountNumber')">
+                                <i class="material-icons">content_copy</i> Copy
+                            </button>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="sellPaymentType">Payment Type</label>
@@ -891,7 +926,11 @@
                     <div class="account-details" id="buyPaymentDetails" style="display: none;">
                         <h3><i class="material-icons" style="vertical-align: middle;">payment</i> Payment Details</h3>
                         <p>Mobile Banking Name: <span id="buyMobileBankingName">bKash Personal</span></p>
-                        <p>Account Number: <span id="buyAccountNumber">01601856499</span> <span class="material-icons copy-icon" data-copy-target="buyAccountNumber">content_copy</span></p>
+                        <p>Account Number: <span id="buyAccountNumber">01601856499</span> 
+                            <button class="copy-button" onclick="copyToClipboard('buyAccountNumber')">
+                                <i class="material-icons">content_copy</i> Copy
+                            </button>
+                        </p>
                         <p>Payment Type: <span id="buyPaymentType">Personal</span></p>
                     </div>
                     
@@ -1295,21 +1334,56 @@
         });
 
         // ==================== COPY FUNCTIONALITY ====================
-        document.querySelectorAll('.copy-icon').forEach(icon => {
-            icon.addEventListener('click', function() {
-                const targetId = this.dataset.copyTarget;
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    const textToCopy = targetElement.textContent;
-                    navigator.clipboard.writeText(textToCopy).then(() => {
-                        showNotification('Copied to clipboard!', 'success');
-                    }).catch(err => {
-                        console.error('Failed to copy text: ', err);
-                        showNotification('Failed to copy', 'error');
-                    });
+        function copyToClipboard(elementId) {
+            let textToCopy = '';
+            
+            if (elementId === 'buyAccountNumber') {
+                textToCopy = document.getElementById(elementId).textContent;
+            } else if (elementId === 'sellAccountNumber') {
+                textToCopy = document.getElementById(elementId).value;
+            }
+            
+            if (!textToCopy) {
+                showNotification('Nothing to copy!', 'error');
+                return;
+            }
+            
+            // Create a temporary textarea element for copying
+            const textArea = document.createElement('textarea');
+            textArea.value = textToCopy;
+            textArea.style.position = 'fixed';
+            textArea.style.top = '-9999px';
+            textArea.style.left = '-9999px';
+            document.body.appendChild(textArea);
+            
+            // Select and copy
+            textArea.select();
+            textArea.setSelectionRange(0, 99999); // For mobile devices
+            
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showNotification('Copied to clipboard!', 'success');
+                } else {
+                    showNotification('Failed to copy!', 'error');
                 }
-            });
-        });
+            } catch (err) {
+                console.error('Copy failed:', err);
+                showNotification('Failed to copy!', 'error');
+            }
+            
+            // Clean up
+            document.body.removeChild(textArea);
+            
+            // Fallback for modern browsers
+            if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    showNotification('Copied to clipboard!', 'success');
+                }).catch(err => {
+                    console.error('Clipboard API error:', err);
+                });
+            }
+        }
 
         // ==================== SELL FORM FUNCTIONS ====================
         function updateSellFields() {
@@ -1317,7 +1391,7 @@
             const receiveMethod = sellReceiveMethod.value;
             
             if (sendMethod && receiveMethod) {
-                sellRateInfo.querySelector('span').textContent = `1 BTC = BDT ${sellRatePerBTC.toFixed(2)}`;
+                sellRateInfo.querySelector('span').textContent = `${adminSellBTC} BTC = BDT ${adminSellBDT}`;
                 sellRateInfo.style.display = 'flex';
                 sellMinAmount.textContent = adminSellBTC;
                 sellAmountInput.min = adminSellBTC;
@@ -1325,7 +1399,7 @@
                 let amount = parseFloat(sellAmountInput.value);
                 if (!isNaN(amount) && amount >= adminSellBTC) {
                     // Correct calculation: amount BTC how much BDT
-                    let calculatedReceivedAmount = amount * sellRatePerBTC;
+                    let calculatedReceivedAmount = (amount / adminSellBTC) * adminSellBDT;
                     receivedAmountInput.value = calculatedReceivedAmount.toFixed(2);
                     sellInstruction.style.display = 'block';
                 } else {
@@ -1354,7 +1428,7 @@
             const receiveMethod = buyReceiveMethod.value;
             
             if (sendMethod && receiveMethod) {
-                buyRateInfo.querySelector('span').textContent = `1 BTC = BDT ${buyRatePerBTC.toFixed(2)}`;
+                buyRateInfo.querySelector('span').textContent = `${adminBuyBTC} BTC = BDT ${adminBuyBDT}`;
                 buyRateInfo.style.display = 'flex';
                 buyMinAmount.textContent = adminBuyBTC;
                 buyAmountInput.min = adminBuyBTC;
@@ -1362,7 +1436,7 @@
                 const amount = parseFloat(buyAmountInput.value);
                 if (!isNaN(amount) && amount >= adminBuyBTC) {
                     // Correct calculation: amount BTC how much BDT needed
-                    let totalBDT = amount * buyRatePerBTC;
+                    let totalBDT = (amount / adminBuyBTC) * adminBuyBDT;
                     totalPayAmountInput.value = totalBDT.toFixed(2);
                 } else {
                     totalPayAmountInput.value = '';
@@ -1411,8 +1485,8 @@
                     buyRatePerBTC = adminBuyBDT / adminBuyBTC;
                     
                     // Update display
-                    document.getElementById('sellRateDisplay').textContent = `1 BTC = BDT ${sellRatePerBTC.toFixed(2)}`;
-                    document.getElementById('buyRateDisplay').textContent = `1 BTC = BDT ${buyRatePerBTC.toFixed(2)}`;
+                    document.getElementById('sellRateDisplay').textContent = `BDT ${adminSellBDT}`;
+                    document.getElementById('buyRateDisplay').textContent = `BDT ${adminBuyBDT}`;
                     document.getElementById('minExchangeBTC').textContent = adminSellBTC;
                     
                     // Update payment accounts
